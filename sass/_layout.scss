@@ -8,7 +8,6 @@ body {
     height : 100vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    // background-color: rgb(179, 179, 204);
     background-color: #fff;
 
 }
@@ -17,7 +16,6 @@ body {
 body::after {
     content : "";
     clip-path: polygon(0 0, 80% 0 , 50% 100% , 0 100%);
-    //background-color: rgb(43, 71, 233);
     background-color: couleur(primaire);
     position: absolute;
     width : 100%;
@@ -83,6 +81,28 @@ p {
 
 .entete{
     grid-area: entete;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    section{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+    }
 
 }
 
@@ -119,9 +139,16 @@ p {
 
 }
 .principal{
-    display : grid;
-    place-items: center;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: principal;
+
+    h3 {
+        padding: 0.3em 0 0.3em 0;
+    }
+
 }
 .pied-page{
     grid-area: pied-page;
